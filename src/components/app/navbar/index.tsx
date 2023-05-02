@@ -16,13 +16,13 @@ export default function AppNavbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50 container">
+    <header className="container">
       <nav
-        className="flex items-center justify-between p-6 lg:px-8"
+        className="flex items-center justify-between py-6"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <NavbarLogo />
+          <NavbarLogo is_dark />
         </div>
         <div className="flex lg:hidden">
           <button
@@ -31,7 +31,7 @@ export default function AppNavbar() {
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+            <Bars3Icon className="h-6 w-6 text-white" aria-hidden="true" />
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
@@ -39,14 +39,14 @@ export default function AppNavbar() {
             <a
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-gray-900"
+              className="text-sm leading-6 text-white"
             >
               {item.name}
             </a>
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <AtomButton text="Login" className="mr-5" />
+          <AtomButton text="Login" className="mr-5 text-white" />
           <AtomButton text="Sign Up" className="bg-yellow-400 font-medium" />
         </div>
       </nav>
@@ -76,14 +76,14 @@ export default function AppNavbar() {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-medium leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     {item.name}
                   </a>
                 ))}
               </div>
               <div className="py-6">
-                <AtomButton text="Login" className="mr-5" />
+                <AtomButton text="Login" className="mr-5 " />
                 <AtomButton
                   text="Sign Up"
                   className="bg-yellow-400 font-medium"
